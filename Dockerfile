@@ -9,10 +9,10 @@ RUN npm install --unsafe-perm
 # Copy frontend source code
 COPY frontend/ ./
 
-# Fix permissions for scripts
+# Fix permissions for react-scripts
 RUN chmod -R 755 /app/frontend/node_modules/.bin
 
-# Build the React app
+# Build React app
 RUN npm run build
 
 # ---------- BACKEND BUILD ----------
@@ -26,7 +26,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy backend source code
 COPY backend/ ./
 
-# Copy React build into backend static files
+# Copy built React app into backend
 COPY --from=frontend /app/frontend/build ./frontend_build
 
 # Expose port
