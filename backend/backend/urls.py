@@ -1,9 +1,9 @@
-from django.urls import path
-from django.http import HttpResponse
-
-def home(request):
-    return HttpResponse("Hello from Django backend!")
+from django.urls import path, re_path
+from .views import FrontendAppView
 
 urlpatterns = [
-    path("", home),
+    # Add any API routes here, e.g. path('api/', include('api.urls')),
+
+    # Catch-all route to serve React frontend
+    re_path(r'^.*$', FrontendAppView.as_view(), name='frontend'),
 ]
