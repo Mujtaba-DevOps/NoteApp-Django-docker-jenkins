@@ -9,7 +9,7 @@ RUN npm install --unsafe-perm
 # Copy frontend source code
 COPY frontend/ ./
 
-# Fix permissions for scripts like react-scripts
+# Fix permissions for scripts
 RUN chmod -R 755 /app/frontend/node_modules/.bin
 
 # Build the React app
@@ -26,11 +26,11 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy backend source code
 COPY backend/ ./
 
-# Copy built frontend into backend static files
+# Copy React build into backend static files
 COPY --from=frontend /app/frontend/build ./frontend_build
 
-# Expose port (example: 8000 for Django)
+# Expose port
 EXPOSE 8000
 
-# Command to run Django server
+# Run Django server
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
