@@ -8,8 +8,8 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #121212;
-      color: #eee;
+      background: #000000; /* black background */
+      color: #333;
       display: flex;
       justify-content: center;
       padding: 20px;
@@ -17,17 +17,17 @@
 
     .container {
       width: 400px;
-      background: #1e1e1e;
-      border-radius: 8px;
+      background: #ffffff; /* keep card white */
+      border-radius: 12px;
       padding: 20px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     }
 
     .header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid #333;
+      border-bottom: 1px solid #ddd;
       padding-bottom: 10px;
       margin-bottom: 20px;
     }
@@ -35,7 +35,7 @@
     .header h1 {
       font-size: 1.5rem;
       margin: 0;
-      color: #ff4d4d;
+      color: #0073b1; /* LinkedIn blue */
     }
 
     .notes-list {
@@ -45,33 +45,34 @@
     }
 
     .note {
-      background: #2a2a2a;
+      background: #e6f0fa; /* light blue */
       padding: 15px;
-      border-radius: 6px;
+      border-radius: 8px;
       margin-bottom: 15px;
       transition: transform 0.2s;
     }
 
     .note:hover {
       transform: translateY(-3px);
-      background: #333;
+      background: #d0e4f7; /* slightly darker blue on hover */
     }
 
     .note-title {
       font-weight: bold;
       margin-bottom: 5px;
+      color: #005582;
     }
 
     .note-date {
       font-size: 0.8rem;
-      color: #aaa;
+      color: #555;
     }
 
     .add-btn {
       position: fixed;
       bottom: 30px;
       right: 30px;
-      background: #ff4d4d;
+      background: #0073b1;
       color: white;
       border: none;
       border-radius: 50%;
@@ -79,7 +80,7 @@
       height: 50px;
       font-size: 2rem;
       cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
   </style>
 </head>
@@ -93,28 +94,28 @@
     <ul class="notes-list">
       <li class="note">
         <div class="note-title">Note #5</div>
-        <div>Does the time not update or something? tests</div>
-        <div class="note-date">21/01/2023</div>
+        <div>Deployed my first full-stack app (Django + React + Docker)</div>
+        <div class="note-date">03/10/2025</div>
       </li>
       <li class="note">
         <div class="note-title">Note #4</div>
-        <div>Looks like everything is working so far This is a test update ok ev...</div>
-        <div class="note-date">20/01/2023</div>
+        <div>CI/CD pipeline configured successfully with Jenkins</div>
+        <div class="note-date">02/10/2025</div>
       </li>
       <li class="note">
         <div class="note-title">Note #3</div>
-        <div>This is a new note now REACT is integrated with Django!</div>
-        <div class="note-date">20/01/2023</div>
+        <div>Learned how to integrate React frontend with Django backend</div>
+        <div class="note-date">01/10/2025</div>
       </li>
       <li class="note">
         <div class="note-title">Note #2</div>
-        <div>This is a new note XD</div>
-        <div class="note-date">20/01/2023</div>
+        <div>Dockerized the application for consistent deployments</div>
+        <div class="note-date">30/09/2025</div>
       </li>
       <li class="note">
         <div class="note-title">Note #1</div>
-        <div>- One - Two - Three</div>
-        <div class="note-date">20/01/2023</div>
+        <div>Started the DevOps journey, step by step learning daily</div>
+        <div class="note-date">29/09/2025</div>
       </li>
     </ul>
   </div>
